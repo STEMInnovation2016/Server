@@ -48,11 +48,10 @@ void Server::sendSlot()
   qint64 blockSize = 9600; //in bytes
 
   qint64 imagesInQue = mTcpSocket->bytesToWrite()/blockSize;
-  int maxPendingImages = 25;
+  int maxPendingImages = 3;
   if(imagesInQue > maxPendingImages)
     {
       std::cout << "Dumping." << std::endl;
-      hold = false;
       return;
     }
 

@@ -14,8 +14,6 @@ class Server : public QObject
 {
     Q_OBJECT
 
-    bool hold;
-    
 public:
     Server(QString ipAddress, int port, QObject *parent = 0);
 
